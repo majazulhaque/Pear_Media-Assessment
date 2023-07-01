@@ -14,3 +14,18 @@ function spin() {
   let Speaker = shuffle([1470, 1830, 2190]);
   let Ipad = shuffle([1410, 1770, 2130]);
 }
+
+function shuffle(array) {
+    var currentIndex = array.length,
+      randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[currentIndex],
+        array[currentIndex],
+      ];
+    }
+    return array;
+  }
+  
