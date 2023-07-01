@@ -1,7 +1,7 @@
 let noOfSpin = 0;
 function spin() {
-    noOfSpin++;
-    wheel.play();
+  noOfSpin++;
+  wheel.play();
   // Fetch container div using id.
   const element = document.getElementById("container");
   let SelectedItem = "";
@@ -49,12 +49,33 @@ function spin() {
   }, 5000);
   if (noOfSpin === 1 || SelectedItem === "Try Again") {
     setTimeout(function () {
-
+      wheel.pause();
+      tryAgain.play();
+      Swal.fire({
+        title: "Uff!",
+        html: "TRY AGAIN To SPIN",
+        imageUrl:
+          "https://cdn2.vectorstock.com/i/1000x1000/84/16/try-again-rubber-stamp-vector-18098416.jpg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+      });
     }, 5500);
   }
   if (noOfSpin === 2 && SelectedItem !== "Try Again") {
     setTimeout(function () {
-
+      wheel.pause();
+      applause.play();
+      noOfSpin--;
+      Swal.fire({
+        title: "Wow!",
+        html: "You Won " + SelectedItem,
+        imageUrl:
+          "https://img.freepik.com/free-vector/celebration-emblem-illustration_1284-7727.jpg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+      });
     }, 5500);
   }
   setTimeout(function () {
