@@ -37,6 +37,10 @@ function spin() {
   if (Speaker.includes(results[0])) SelectedItem = "Speaker Portable";
   if (Ipad.includes(results[0])) SelectedItem = "Ipad Mini";
 
+  box.style.setProperty("transition", "all ease 5s");
+  box.style.transform = "rotate(" + results[0] + "deg)";
+  element.classList.remove("animate");
+
 
 }
 
