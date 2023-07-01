@@ -186,3 +186,13 @@ span{
 .container.animate:after{
     animation: animateArrow 0.7s ease infinite;
 }
+audio{
+    display: none;
+}
+@keyframes animateArrow{
+    50%{
+        right:  -50px;
+        
+    }
+}
+
