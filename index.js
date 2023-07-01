@@ -46,6 +46,7 @@ function spin() {
 
   setTimeout(function () {
     element.classList.add("animate");
+    
   }, 5000);
   if (noOfSpin === 1 || SelectedItem === "Try Again") {
     setTimeout(function () {
