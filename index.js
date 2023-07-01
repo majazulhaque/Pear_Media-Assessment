@@ -1,5 +1,7 @@
 let noOfSpin = 0;
 function spin() {
+    // Disable the button
+  document.getElementById("spin").disabled = true;
   noOfSpin++;
   wheel.play();
   // Fetch container div using id.
@@ -46,8 +48,12 @@ function spin() {
 
   setTimeout(function () {
     element.classList.add("animate");
-    
+
   }, 5000);
+  // Enable the button after the spinning animation is finished
+  setTimeout(function () {
+    document.getElementById("spin").disabled = false;
+  }, 6000);
   if (noOfSpin === 1 || SelectedItem === "Try Again") {
     setTimeout(function () {
       wheel.pause();
@@ -61,6 +67,7 @@ function spin() {
         imageHeight: 200,
         imageAlt: "Custom image",
       });
+      
     }, 5500);
   }
   if (noOfSpin === 2 && SelectedItem !== "Try Again") {
@@ -77,6 +84,7 @@ function spin() {
         imageHeight: 200,
         imageAlt: "Custom image",
       });
+      
     }, 5500);
   }
   setTimeout(function () {
@@ -98,3 +106,5 @@ function shuffle(array) {
   }
   return array;
 }
+
+
