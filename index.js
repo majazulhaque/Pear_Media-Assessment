@@ -1,6 +1,10 @@
 let noOfSpin = 0;
+const congratulationVideo = document.createElement("video");
+const congratulationOverlay = document.getElementById(
+    "congratulationOverlay"
+  );
 function spin() {
-    // Disable the button
+  // Disable the button
   document.getElementById("spin").disabled = true;
   noOfSpin++;
   wheel.play();
@@ -48,7 +52,6 @@ function spin() {
 
   setTimeout(function () {
     element.classList.add("animate");
-
   }, 5000);
   // Enable the button after the spinning animation is finished
   setTimeout(function () {
@@ -67,7 +70,6 @@ function spin() {
         imageHeight: 200,
         imageAlt: "Custom image",
       });
-      
     }, 5500);
   }
   if (noOfSpin === 2 && SelectedItem !== "Try Again") {
@@ -75,6 +77,12 @@ function spin() {
       wheel.pause();
       applause.play();
       noOfSpin--;
+
+      // Display the congratulation video
+      congratulationOverlay.style.display = "block";
+
+      // Show the congratulation message in a modal or alert
+
       Swal.fire({
         title: "Wow!",
         html: "You Won " + SelectedItem,
@@ -84,9 +92,22 @@ function spin() {
         imageHeight: 200,
         imageAlt: "Custom image",
       });
-      
+
+      // Add the congratulation video to the overlay
+      congratulationVideo.src = "assets/video/congrats.webm";
+      congratulationVideo.autoplay = true;
+      congratulationVideo.loop = true;
+      congratulationVideo.muted = true;
+      congratulationVideo.style.width = "100%";
+      congratulationVideo.style.height = "100%";
+
+      congratulationOverlay.appendChild(congratulationVideo);
     }, 5500);
   }
+  setTimeout(function () {
+    congratulationOverlay.removeChild(congratulationVideo);
+    congratulationOverlay.style.display = "none";
+  }, 10000);
   setTimeout(function () {
     box.style.setProperty("transition", "initial");
     box.style.transform = "rotate(90deg)";
@@ -106,5 +127,3 @@ function shuffle(array) {
   }
   return array;
 }
-
-
