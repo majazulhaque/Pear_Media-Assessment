@@ -12,6 +12,11 @@ STACK USED -
 
 SWEET ALERT is used to show the gift after spinning the Wheel.
 
+3 SOUND is added in this wheel.
+        1. Wheel sound when spinning.
+        2. Try Again sound.
+        3. Applause sound.
+
 DEMO IMAGE -
 
 
