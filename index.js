@@ -1,12 +1,17 @@
 let noOfSpin = 0;
+// Fetching the video tag and congratulation container
 const congratulationVideo = document.createElement("video");
 const congratulationOverlay = document.getElementById(
     "congratulationOverlay"
   );
+
+// function to spin the wheel
 function spin() {
   // Disable the button
   document.getElementById("spin").disabled = true;
+
   noOfSpin++;
+  // to play sound
   wheel.play();
   // Fetch container div using id.
   const element = document.getElementById("container");
@@ -23,6 +28,7 @@ function spin() {
   let Speaker = shuffle([1470, 1830, 2190]);
   let Ipad = shuffle([1410, 1770, 2130]);
 
+  // Store the wheel value in results
   let results = shuffle([
     TA[0],
     Flipkart[0],
@@ -35,6 +41,8 @@ function spin() {
     Speaker[0],
     Ipad[0],
   ]);
+
+  // Conditions for selected Item value
   if (TA.includes(results[0])) SelectedItem = "Try Again";
   if (Flipkart.includes(results[0])) SelectedItem = "10% Flipkart Discount";
   if (Myntra.includes(results[0])) SelectedItem = "Myntra Coupon";
@@ -46,10 +54,12 @@ function spin() {
   if (Speaker.includes(results[0])) SelectedItem = "Speaker Portable";
   if (Ipad.includes(results[0])) SelectedItem = "Ipad Mini";
 
+  // Set the transition and rotation value
   box.style.setProperty("transition", "all ease 5s");
   box.style.transform = "rotate(" + results[0] + "deg)";
   element.classList.remove("animate");
 
+  // to add the animate class into wheel
   setTimeout(function () {
     element.classList.add("animate");
   }, 5000);
@@ -58,9 +68,11 @@ function spin() {
     document.getElementById("spin").disabled = false;
   }, 6000);
   if (noOfSpin === 1 || SelectedItem === "Try Again") {
+    // When wheel rotate first times
     setTimeout(function () {
       wheel.pause();
       tryAgain.play();
+      // To show the sweet Alert after rotating the wheel
       Swal.fire({
         title: "Uff!",
         html: "TRY AGAIN To SPIN",
@@ -73,6 +85,7 @@ function spin() {
     }, 5500);
   }
   if (noOfSpin === 2 && SelectedItem !== "Try Again") {
+    // When wheel rotate second times
     setTimeout(function () {
       wheel.pause();
       applause.play();
@@ -81,8 +94,7 @@ function spin() {
       // Display the congratulation video
       congratulationOverlay.style.display = "block";
 
-      // Show the congratulation message in a modal or alert
-
+      // Show the congratulation message
       Swal.fire({
         title: "Wow!",
         html: "You Won " + SelectedItem,
@@ -104,16 +116,21 @@ function spin() {
       congratulationOverlay.appendChild(congratulationVideo);
     }, 5500);
   }
+//   function to remove the video celibration
   setTimeout(function () {
     congratulationOverlay.removeChild(congratulationVideo);
     congratulationOverlay.style.display = "none";
   }, 10000);
+
+//   function to stop the wheel
   setTimeout(function () {
     box.style.setProperty("transition", "initial");
     box.style.transform = "rotate(90deg)";
   }, 6000);
 }
 
+
+// suffle function to rotate the wheel using array number
 function shuffle(array) {
   var currentIndex = array.length,
     randomIndex;
