@@ -13,6 +13,20 @@ function spin() {
   let Macbook = shuffle([1530, 1890, 2250]);
   let Speaker = shuffle([1470, 1830, 2190]);
   let Ipad = shuffle([1410, 1770, 2130]);
+
+  let results = shuffle([
+    TA[0],
+    Flipkart[0],
+    Myntra[0],
+    Samsung[0],
+    OnePlus[0],
+    Realme[0],
+    Whirlpool[0],
+    Macbook[0],
+    Speaker[0],
+    Ipad[0],
+  ]);
+
 }
 
 function shuffle(array) {
