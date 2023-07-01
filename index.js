@@ -1,5 +1,8 @@
+let noOfSpin = 0;
 function spin() {
-    // Fetch container div using id.
+    noOfSpin++;
+    WheelEvent.play();
+  // Fetch container div using id.
   const element = document.getElementById("container");
   let SelectedItem = "";
   // Array is generated using online array generater.
@@ -41,20 +44,34 @@ function spin() {
   box.style.transform = "rotate(" + results[0] + "deg)";
   element.classList.remove("animate");
 
+  setTimeout(function () {
+    
+  }, 5000);
+  if (noOfSpin === 1 || SelectedItem === "Try Again") {
+    setTimeout(function () {
 
+    }, 5500);
+  }
+  if (noOfSpin === 2 && SelectedItem !== "Try Again") {
+    setTimeout(function () {
+
+    }, 5500);
+  }
+  setTimeout(function () {
+
+  }, 6000);
 }
 
 function shuffle(array) {
-    var currentIndex = array.length,
-      randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [
-        array[currentIndex],
-        array[currentIndex],
-      ];
-    }
-    return array;
+  var currentIndex = array.length,
+    randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[currentIndex],
+      array[currentIndex],
+    ];
   }
-  
+  return array;
+}
