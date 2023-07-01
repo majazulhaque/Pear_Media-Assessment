@@ -26,6 +26,17 @@ function spin() {
     Speaker[0],
     Ipad[0],
   ]);
+  if (TA.includes(results[0])) SelectedItem = "Try Again";
+  if (Flipkart.includes(results[0])) SelectedItem = "10% Flipkart Discount";
+  if (Myntra.includes(results[0])) SelectedItem = "Myntra Coupon";
+  if (Samsung.includes(results[0])) SelectedItem = "Samsung Ideapad";
+  if (OnePlus.includes(results[0])) SelectedItem = "OnePlus Airbud";
+  if (Realme.includes(results[0])) SelectedItem = "Realme X9 5g";
+  if (Whirlpool.includes(results[0])) SelectedItem = "Whirlpool AC";
+  if (Macbook.includes(results[0])) SelectedItem = "MacBook Air";
+  if (Speaker.includes(results[0])) SelectedItem = "Speaker Portable";
+  if (Ipad.includes(results[0])) SelectedItem = "Ipad Mini";
+
 
 }
 
