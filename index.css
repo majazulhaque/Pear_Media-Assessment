@@ -28,7 +28,7 @@ body{
     content: "";
     width: 100%;
     height: 100%;
-    background: url(down.png) no-repeat;
+    /* background: url(down.png) no-repeat; */
     background-size: 13%;
     left: 4%;
     top: 45%;
@@ -83,3 +83,81 @@ span{
 .box2 .span1{
     background-color: #333;
 }
+
+.font{
+    color: #fff;
+    font-size: 20px;
+}
+.box1 .span1 h5{
+    position: absolute;
+    top: 40%;
+    right: 63%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+.box1 .span2 h5{
+    position: absolute;
+    top: 30%;
+    right: 57%;
+    transform: rotate(-130deg);
+    text-align: center;
+}
+.box1 .span3 h5{
+    position: absolute;
+    top: 22%;
+    right: 38%;
+    transform: rotate(-90deg);
+    text-align: center;
+}
+.box1 .span4 h5{
+    position: absolute;
+    top: 25%;
+    right: 16%;
+    transform: rotate(-45deg);
+    text-align: center;
+}
+.box1 .span5 h5{
+    position: absolute;
+    top: 40%;
+    right: 6%;
+    transform: rotate(-15deg);
+    text-align: center;
+}
+
+.box2 .span1 h5{
+    font-size: 25px;
+    position: absolute;
+    top: 34%;
+    right: 70%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+.box2 .span2 h5{
+    position: absolute;
+    top: 28%;
+    right: 54%;
+    transform: rotate(-130deg);
+    text-align: center;
+}
+.box2 .span3 h5{
+    position: absolute;
+    top: 15%;
+    right: 40%;
+    transform: rotate(270deg);
+    text-align: center;
+}
+.box2 .span4 h5{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    transform: rotate(310deg);
+    text-align: center;
+}
+.box2 .span5 h5{
+    position: absolute;
+    top: 38%;
+    right: 6%;
+    transform: rotate(-20deg);
+    text-align: center;
+}
+
