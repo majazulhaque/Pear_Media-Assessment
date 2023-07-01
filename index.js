@@ -1,7 +1,7 @@
 let noOfSpin = 0;
 function spin() {
     noOfSpin++;
-    WheelEvent.play();
+    wheel.play();
   // Fetch container div using id.
   const element = document.getElementById("container");
   let SelectedItem = "";
@@ -45,7 +45,7 @@ function spin() {
   element.classList.remove("animate");
 
   setTimeout(function () {
-    
+    element.classList.add("animate");
   }, 5000);
   if (noOfSpin === 1 || SelectedItem === "Try Again") {
     setTimeout(function () {
@@ -58,7 +58,8 @@ function spin() {
     }, 5500);
   }
   setTimeout(function () {
-
+    box.style.setProperty("transition", "initial");
+    box.style.transform = "rotate(90deg)";
   }, 6000);
 }
 
