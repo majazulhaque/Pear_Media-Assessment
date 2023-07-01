@@ -17,13 +17,13 @@ DEMO IMAGE -
 
         First Appearance-
 
-        ![wheel1](https://github.com/majazulhaque/Pear_Media-Assessment/assets/74106414/ee0f23fd-2578-4159-9617-08d854e180c2)
+![wheel1](https://github.com/majazulhaque/Pear_Media-Assessment/assets/74106414/ee0f23fd-2578-4159-9617-08d854e180c2)
 
         After 1st spinning of wheel-
 
-        ![wheel2](https://github.com/majazulhaque/Pear_Media-Assessment/assets/74106414/4173f575-ca5f-4e30-9c80-3f5ed6b3f3cc)
+![wheel2](https://github.com/majazulhaque/Pear_Media-Assessment/assets/74106414/4173f575-ca5f-4e30-9c80-3f5ed6b3f3cc)
 
         After 2nd spinning of wheel-
 
-        ![wheel3](https://github.com/majazulhaque/Pear_Media-Assessment/assets/74106414/f878ac37-6d78-4799-b2a8-d540bbd75668)
-            
+![wheel3](https://github.com/majazulhaque/Pear_Media-Assessment/assets/74106414/f878ac37-6d78-4799-b2a8-d540bbd75668)
+        
