@@ -182,3 +182,7 @@ span{
     height: 70px;
     font-size: 20px;
 }
+
+.container.animate:after{
+    animation: animateArrow 0.7s ease infinite;
+}
